@@ -1,0 +1,24 @@
+### Create a new student
+POST http://localhost:5000/students
+Content-Type: application/json
+
+{
+  "name": "Alice Johnson",
+  "email": "alice@example.com",
+  "course": "Data Science",
+  "grade": 15
+}
+
+### Read all students
+GET http://localhost:5000/students
+
+### Update student
+PUT http://localhost:5000/students/<id>
+Content-Type: application/json
+
+{
+  "grade": 18
+}
+
+### Delete student
+DELETE http://localhost:5000/students/<id>
