@@ -1,9 +1,9 @@
-// Only allow read/write if authenticated (or open for demo)
+// Only allow read/write if authenticated
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     match /students/{document=**} {
-      allow read, write: if true; // Demo purpose only
+      allow read, write, update, delete: if true; // Demo purpose only
     }
   }
 }
